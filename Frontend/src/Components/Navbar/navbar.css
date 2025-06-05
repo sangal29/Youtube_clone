@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* main navbar class */
+.navbar {
+  height: 56px;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  top: 0;
+  position: fixed;
+  background-color: black;
+  z-index: 10;
+}
+
+/* navbar left part */
+.navbar_left {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+/* menu icon */
+.navbar_hamberger {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* youtube icon section */
+.navbar_youtubeimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar_youtubeImage {
+  color: red;
+}
+
+/* youtube text */
+.youtube_title {
+  font-size: 20px;
+  font-family: "Lora", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  margin-left: 4px;
+}
+
+/* navbar middle part */
+.navbar_middle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* search box */
+.navbar_searchbox {
+  display: flex;
+  align-items: center;
+  background-color: #121212;
+  border: 1px solid rgb(58, 57, 57);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+    gap: 10px;
+}
+
+
+/* input inside search box */
+.navbar_searchbox_input {
+  width: 100%;
+  height: 40px;
+  padding-left: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  font-family: sans-serif;
+
+}
+
+/* search icon container */
+.navbar_search_icon {
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* mic icon */
+
+.navbar_mic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(42,42,42);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+/* midle part is end  */
+
+
+/* navbar right part  */
+
+/* main navbar right  */
+.navbar_right{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display:flex;
+    gap: 20px;
+}
+
+
+/* profile image  */
+.navbar_right_logo{
+  width: 30px;
+  border-radius:50% ;
+  cursor: pointer;
+}
+
+.navbar_modle{
+    position: absolute;
+    top: 35px;
+    width: 100%;
+    z-index: 20;
+}
+
+.navbar_modle_option{
+    background-color: rgb(85,85,85);
+    padding: 10px;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(34,33,33);
+    }
+}
