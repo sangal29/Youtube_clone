@@ -8,8 +8,9 @@ import VideoCallIcon from "@mui/icons-material/VideoCall";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import PersonIcon from '@mui/icons-material/Person';
 import { useState } from "react";
+import SideNavbar from "../SideNavbar/sideNavbar";
 
-const Navbar = () => {
+const Navbar = ({setSideNavbarFunc , sideNavbar}) => {
 
     // when user come the the profile img login here
     const[userPick,setUserPick] = useState("https://t3.ftcdn.net/jpg/03/53/11/00/360_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg");
@@ -20,6 +21,10 @@ const Navbar = () => {
     const handleClickModel =()=>{
         setNavbarModel(prev=>!prev); 
     }
+
+    const sideNavbarFunc=()=>{
+     setSideNavbarFunc(!sideNavbar)
+    }
   return (
     <>
       {/* The main navbar class */}
@@ -27,8 +32,8 @@ const Navbar = () => {
         {/* Left side of the navbar  */}
         <div className="navbar_left">
           {/* Menu icon  class */}
-          <div className="navbar_hamberger">
-            <MenuIcon sx={{ color: "white" }} />
+          <div className="navbar_hamberger" onClick={sideNavbarFunc}>
+            <MenuIcon  sx={{ color: "white" }} />
           </div>
 
           {/* youtube left icon class */}
