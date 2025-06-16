@@ -11,21 +11,27 @@ import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ContentCutIcon from "@mui/icons-material/ContentCut";
+import { Link } from "react-router-dom";
+import { useColorScheme } from "@mui/material/styles";
 
-const SideNavbar = ({sideNavbar}) => {
+const SideNavbar = ({ sideNavbar }) => {
   return (
     <>
       {/* side navbar  section  */}
-      <div className={ sideNavbar ? "home_sideNavbar" : "home_sideNavbarHide" }>
-
+      <div className={sideNavbar ? "home_sideNavbar" : "home_sideNavbarHide"}>
         {/* home sidenavbar Top part  */}
         <div className="homesdeNavbarTop">
           {/* home sidenavbar topoption */}
-          <div className={"sideNavbarTopOption"}>
+
+          <Link
+            to={"/"}
+            className="sideNavbarTopOption"
+            style={{ color: "white", textDecoration: "none" }}
+          >
             <HomeIcon />
-            {/* home sideNavbar top option title */}
             <div className="home_sideNavbarTopOptionTitle">Home</div>
-          </div>
+          </Link>
+
           <div className={"sideNavbarTopOption"}>
             <VideocamIcon />
             {/* home sideNavbar top option title */}
@@ -108,47 +114,42 @@ const SideNavbar = ({sideNavbar}) => {
               className="home_sideNavBar_logo"
             />
             <div className="home_sideNavBarTopOptionTitle">Aaj Tak</div>
-            
           </div>
 
-            <div className="sideNavbarTopOption">
+          <div className="sideNavbarTopOption">
             <img
               src="https://upload.wikimedia.org/wikipedia/en/thumb/7/77/Aaj_Tak_logo.svg/1200px-Aaj_Tak_logo.svg.png"
               alt="Aaj Tak"
               className="home_sideNavBar_logo"
             />
             <div className="home_sideNavBarTopOptionTitle">Aaj Tak</div>
-            
           </div>
 
-            <div className="sideNavbarTopOption">
+          <div className="sideNavbarTopOption">
             <img
               src="https://upload.wikimedia.org/wikipedia/en/thumb/7/77/Aaj_Tak_logo.svg/1200px-Aaj_Tak_logo.svg.png"
               alt="Aaj Tak"
               className="home_sideNavBar_logo"
             />
             <div className="home_sideNavBarTopOptionTitle">Aaj Tak</div>
-            
           </div>
 
-            <div className="sideNavbarTopOption">
+          <div className="sideNavbarTopOption">
             <img
               src="https://upload.wikimedia.org/wikipedia/en/thumb/7/77/Aaj_Tak_logo.svg/1200px-Aaj_Tak_logo.svg.png"
               alt="Aaj Tak"
               className="home_sideNavBar_logo"
             />
             <div className="home_sideNavBarTopOptionTitle">Aaj Tak</div>
-            
           </div>
 
-            <div className="sideNavbarTopOption">
+          <div className="sideNavbarTopOption">
             <img
               src="https://upload.wikimedia.org/wikipedia/en/thumb/7/77/Aaj_Tak_logo.svg/1200px-Aaj_Tak_logo.svg.png"
               alt="Aaj Tak"
               className="home_sideNavBar_logo"
             />
             <div className="home_sideNavBarTopOptionTitle">Aaj Tak</div>
-            
           </div>
         </div>
       </div>

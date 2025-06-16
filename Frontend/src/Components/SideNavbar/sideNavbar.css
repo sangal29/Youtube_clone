@@ -1,7 +1,5 @@
-
-/* main home sidenavbar section  */
-.home_sideNavbar{
-display: flex;
+/* main home sidenavbar section */
+.home_sideNavbar {
   display: flex;
   flex-direction: column;
   flex: 0.16 1;
@@ -9,8 +7,8 @@ display: flex;
   height: 92vh;
   overflow-y: auto;
   position: fixed;
-  top: 55px;
-  left: 0px;
+  top: 56px; /* match navbar height */
+  left: 0;
   width: 275px;
   padding: 14px;
   background-color: black;
@@ -18,62 +16,102 @@ display: flex;
   color: white;
 }
 
-.home_sideNavbarHide{
-    display: none;
+.home_sideNavbarHide {
+  display: none;
 }
-.home_sideNavbar::-webkit-scrollbar{
+
+.home_sideNavbar::-webkit-scrollbar {
   width: 12px;
 }
-/* home sidenavbar top style   */
-.homesdeNavbarTop{
-    display: flex;
-    flex-direction: column;
-    border-bottom:1px solid rgb(86,85,86);
-    padding-bottom: 10px;
+
+/* sidenavbar top section */
+.homesdeNavbarTop {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgb(86, 85, 86);
+  padding-bottom: 10px;
 }
 
-/* home sidenavbar top option style like home  */
-.sideNavbarTopOption{
- display: flex;
- gap: 20px;
- align-items: center;
- padding: 9px 10px;
- border-radius: 15px;
- cursor: pointer;
- &:hover{
-    background-color: rgb(36,35,36);
+.sideNavbarTopOption {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 9px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.sideNavbarTopOption:hover {
+  background-color: rgb(36, 35, 36);
+}
 
- }
-} 
+.home_sideNavbarTopOptionTitle {
+  font-size: 14px;
+  font-weight: 450;
+}
 
- /* home_sideNavbar title style */
-.home_sideNavbarTopOptionTitle{
-    font-size: 14px;
-    font-weight: 450;
+.homeLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* sidenavbar middle */
+.home_sideNavbar_middle {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgb(86, 85, 85);
+  padding: 10px 0;
+}
+
+/* bottom section */
+.home_sideNavbarBottemHeading {
+  font-weight: 600;
+}
+
+.home_sideNavBar_logo {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
 }
 
 
-/* side navbar top portion end  */
-
-
-/* styling of middle portion of sidenavbar  */
-.home_sideNavbar_middle{
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid rgb(86,85,85);
-    padding: 10px 0;
+.fullhomePage {
+  margin-left: 0; /* If sidebar is hidden */
 }
 
-/* bottom heading section  */
-.home_sideNavbarBottemHeading{
+/*  Responsive adjustments */
+@media (max-width: 1024px) {
+  .home_sideNavbar {
+    width: 220px;
+  }
 
-    font-weight: 600;
+  .homePage {
+    margin-left: 220px;
+  }
 }
 
-/* bottom subscription part */
+@media (max-width: 768px) {
+  .home_sideNavbar {
+    position: absolute;
+    width: 200px;
+    left: 0;
+    z-index: 15;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
 
-.home_sideNavBar_logo{
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+  .home_sideNavbar.active {
+    transform: translateX(0);
+  }
+
+  .homePage {
+    margin-left: 0;
+  }
+}
+
+/* For phones */
+@media (max-width: 480px) {
+  .home_sideNavbar {
+    width: 180px;
+    padding: 10px;
+  }
 }
