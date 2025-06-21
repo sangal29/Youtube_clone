@@ -4,35 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>YouTube Clone - MERN Stack Project</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    h1, h2, h3 {
-      color: #cc0000;
-    }
-    code {
-      background-color: #eee;
-      padding: 2px 4px;
-      border-radius: 4px;
-    }
-    pre {
-      background-color: #f4f4f4;
-      padding: 10px;
-      overflow-x: auto;
-      border-left: 4px solid #cc0000;
-    }
-    a {
-      color: #0066cc;
-    }
-    ul {
-      margin-top: 0;
-    }
-  </style>
+ 
 </head>
 <body>
 
