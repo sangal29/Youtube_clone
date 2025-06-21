@@ -135,15 +135,7 @@ npm run dev
     <li>Building a clean, modular folder structure</li>
   </ul>
 
-  <h2>Screenshots (Optional)</h2>
-  <p>You can include:</p>
-  <ul>
-    <li>Signup/Login Page</li>
-    <li>Home Page with video grid</li>
-    <li>Video Player Page with comments</li>
-    <li>Upload Video Form</li>
-    <li>Channel Page</li>
-  </ul>
+ 
 
   <p><strong>Thanks for reading!</strong> If you'd like to explore the code or try it out, visit the GitHub repo linked at the top.</p>
 
