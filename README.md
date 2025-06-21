@@ -1,52 +1,103 @@
-YouTube Clone - MERN Stack Project
-# YouTube Clone - MERN Stack Project
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube Clone - MERN Stack Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #cc0000;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      overflow-x: auto;
+      border-left: 4px solid #cc0000;
+    }
+    a {
+      color: #0066cc;
+    }
+    ul {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
 
-Project Overview
+  <h1>YouTube Clone - MERN Stack Project</h1>
 
-The YouTube Clone is a full-stack web application developed using the MERN stack (MongoDB, Express.js, React.js, Node.js). The objective of this project is to simulate a simplified version of YouTube, offering users the ability to authenticate, upload videos, browse and watch content, and interact via comments. This project was built as a learning exercise to strengthen my understanding of full-stack development and improve problem-solving through hands-on experience.
+  <p><strong>Author:</strong> Rishabh Sangal</p>
+  <p><strong>GitHub Repository:</strong> 
+    <a href="https://github.com/sangal29/Youtube_clone" target="_blank">https://github.com/sangal29/Youtube_clone</a>
+  </p>
 
-Key Features
+  <h2>Project Overview</h2>
+  <p>This is a personal project I built to practice and solidify my MERN stack skills. It's a fully functional YouTube clone that allows users to register, upload and view videos, interact through comments, and explore channels — all designed with a clean, responsive UI inspired by YouTube.</p>
+  <p>The goal was to deepen my understanding of backend API development, frontend component design, authentication, media handling, and seamless integration across the full stack.</p>
 
-•	- User Authentication (Signup, Login, Logout) using JWT
-•	- Video Upload with title and file
-•	- Watch Videos via embedded video player
-•	- Comment System (Post and View Comments)
-•	- Search functionality for videos by title
-•	- Toast Notifications for user feedback (React Toastify)
-•	- YouTube-inspired responsive UI using Material UI and custom CSS
+  <h2>Features</h2>
+  <ul>
+    <li>🔐 User Authentication (Signup, Login, Logout) with JWT</li>
+    <li>📤 Upload Videos with titles and thumbnails using Multer</li>
+    <li>🎬 Watch Videos via embedded video player</li>
+    <li>👍 Like / 👎 Dislike functionality</li>
+    <li>💬 Post and Read Comments</li>
+    <li>📺 Channel Creation with video management</li>
+    <li>🔎 Search videos by title</li>
+    <li>🏷️ Filter videos based on categories</li>
+    <li>🔔 Toast Notifications using React Toastify</li>
+    <li>📱 Fully Responsive Design using Material UI + CSS</li>
+  </ul>
 
-Technologies & Libraries Used
+  <h2>Tech Stack</h2>
 
-Backend:
-•	- **Node.js** – JavaScript runtime environment
-•	- **Express.js** – Web application framework
-•	- **MongoDB** – NoSQL database
-•	- **Mongoose** – MongoDB object modeling
-•	- **Multer** – Middleware for handling multipart/form-data (video upload)
-•	- **JWT (jsonwebtoken)** – Authentication and authorization
+  <h3>Frontend</h3>
+  <ul>
+    <li>React.js (Vite)</li>
+    <li>React Router</li>
+    <li>Axios</li>
+    <li>Material UI</li>
+    <li>React Toastify</li>
+    <li>CSS</li>
+  </ul>
 
-Frontend:
-•	- **React.js (Vite)** – Frontend framework
-•	- **Axios** – For HTTP API requests
-•	- **Material UI** – For consistent iconography and component styling
-•	- **React Toastify** – For displaying toast notifications
-•	- **CSS** – Custom styling for responsive layout
+  <h3>Backend</h3>
+  <ul>
+    <li>Node.js</li>
+    <li>Express.js</li>
+    <li>MongoDB</li>
+    <li>Mongoose</li>
+    <li>Multer</li>
+    <li>JWT (jsonwebtoken)</li>
+  </ul>
 
-Folder Structure
-
+  <h2>Folder Structure</h2>
+  <pre>
 Root Directory
-├── controllers/           # Handles route logic (comment.js, user.js, video.js)
+├── controllers/           # comment.js, user.js, video.js
 ├── middleware/
-│   └── authentication.js  # Middleware for JWT verification
+│   └── authentication.js  # JWT middleware
 ├── models/
-│   ├── comment.js         # Mongoose schema for comments
-│   ├── user.js            # Mongoose schema for users
-│   └── video.js           # Mongoose schema for videos
+│   ├── comment.js
+│   ├── user.js
+│   └── video.js
 ├── routes/
-│   ├── comment.js         # Comment-related routes
-│   ├── user.js            # User auth routes
-│   └── video.js           # Video-related routes
-├── index.js               # Backend server entry point
+│   ├── comment.js
+│   ├── user.js
+│   └── video.js
+├── index.js               # Entry point
 └── Frontend/
     └── src/
         ├── components/
@@ -61,60 +112,68 @@ Root Directory
         │   └── Video/
         ├── App.js
         └── main.js
+  </pre>
 
-Running the Project
+  <h2>Getting Started</h2>
 
-Backend Setup
-npm install       # Install backend dependencies
-npm start         # Start backend server on port 4000
+  <h3>Backend Setup</h3>
+  <pre>
+npm install
+npm start
+  </pre>
+  <p>Make sure MongoDB is running locally or connected via Atlas.</p>
 
-Ensure MongoDB is connected (either locally or via MongoDB Atlas).
+  <h3>Frontend Setup</h3>
+  <pre>
+cd Frontend
+npm install
+npm run dev
+  </pre>
+  <p>Frontend runs on: <code>http://localhost:5173</code></p>
 
-Frontend Setup
-cd Frontend       # Navigate to frontend folder
-npm install       # Install frontend dependencies
-npm run dev       # Start Vite development server
+  <h2>API Endpoints Overview</h2>
 
-The frontend will typically run on http://localhost:5173
+  <h3>Auth</h3>
+  <ul>
+    <li>POST <code>/auth/signup</code> – Register user</li>
+    <li>POST <code>/auth/login</code> – Login</li>
+  </ul>
 
-API Endpoints
+  <h3>Videos</h3>
+  <ul>
+    <li>POST <code>/api/video</code> – Upload a video</li>
+    <li>GET <code>/api/allvideo</code> – Fetch all videos</li>
+    <li>GET <code>/api/getVideoById/:id/channel</code> – Fetch video and channel info</li>
+    <li>GET <code>/api/:id/channel</code> – Channel by ID</li>
+  </ul>
 
-Authentication
-•	- POST /auth/signup – Register a new user
-•	- POST /auth/login – Authenticate a user
+  <h3>Comments</h3>
+  <ul>
+    <li>POST <code>/commentApi/comment</code> – Add comment</li>
+    <li>GET <code>/commentApi/comment</code> – Get comments</li>
+  </ul>
 
-Videos
-•	- POST /api/video – Upload a new video
-•	- GET /api/allvideo – Retrieve all uploaded videos
-•	- GET /api/getVideoById/:id/channel – Get video and channel details
-•	- GET /api/:id/channel – Retrieve channel info by video ID
+  <h2>What I Learned</h2>
+  <ul>
+    <li>Creating a full-stack project from scratch</li>
+    <li>Managing video uploads and file storage</li>
+    <li>Securing APIs using JWT</li>
+    <li>Using Material UI to build consistent, responsive interfaces</li>
+    <li>Handling form data and file uploads with Multer</li>
+    <li>Building a clean, modular folder structure</li>
+  </ul>
 
-Comments
-•	- POST /commentApi/comment – Post a comment
-•	- GET /commentApi/comment – Retrieve comments for a video
+  <h2>Screenshots (Optional)</h2>
+  <p>You can include:</p>
+  <ul>
+    <li>Signup/Login Page</li>
+    <li>Home Page with video grid</li>
+    <li>Video Player Page with comments</li>
+    <li>Upload Video Form</li>
+    <li>Channel Page</li>
+  </ul>
 
-Learning Outcomes
+  <p><strong>Thanks for reading!</strong> If you'd like to explore the code or try it out, visit the GitHub repo linked at the top.</p>
 
-•	- Deepened understanding of full-stack architecture
-•	- Experience with JWT-based user authentication
-•	- Applied concepts of file upload handling using Multer
-•	- Improved skills in building RESTful APIs with Express
-•	- Mastery of frontend design using React and component structuring
-
-Author
-
-**Rishabh Sangal**  
-B.Tech CSE | IMS Engineering College  
-GitHub: @sangal29
-
-Screenshots (Add as needed)
-
-You can optionally insert screenshots of:
-•	- Login / Signup Page
-•	- Home Page with video listings
-•	- Upload Video Page
-•	- Watch Page with embedded video and comments
-
----
-
-This project was developed for academic purposes to demonstrate my understanding of MERN stack and improve logic building through practical implementation.
+</body>
+</html>
